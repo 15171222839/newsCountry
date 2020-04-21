@@ -1,0 +1,339 @@
+/**index.wxss**/
+.newsInc{
+  font-size: 24rpx;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+/* 两行省略号 */
+.twoKit{
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+/* 单行省略 */
+.p-eclipse{
+  width: 100%;overflow: hidden;white-space:nowrap;
+  text-overflow:ellipsis;-o-text-overflow:ellipsis;
+  }
+/* flex 弹性盒子 */
+.flexT{
+  display:flex;
+  justify-content: space-between;
+}
+.iSeach{
+  width:100%;
+  height:120rpx;
+  position: fixed;
+  top:0rpx;
+  left:0rpx;
+  background:white;
+  z-index:9;
+}
+.title{
+  margin:20rpx 32rpx;
+  width: 686rpx;
+	height: 80rpx;
+	background-color: #ffffff;
+	box-shadow: 0rpx 0rpx 14rpx 0rpx 
+		rgba(0, 0, 0, 0.07);
+	border-radius: 40rpx;
+  display:flex;
+  justify-content: space-between;
+	font-size: 22rpx;
+	color: #666666;
+  line-height: 80rpx;
+
+  
+}
+.Scity{
+  display:flex;
+}
+.SImg{
+  width:23rpx;
+  height:30rpx;
+  vertical-align: middle;
+  margin:25rpx 21rpx;
+}
+.Sxian{
+
+}
+.cbImg{
+  width:36rpx;
+  height:18rpx;
+  margin-left:40rpx;
+}
+.SImgx{
+  width:16rpx;
+  height:10rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  margin:35rpx 10rpx;
+}
+.SImgxShop{
+  width:16rpx;
+  height:10rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  margin:42rpx 10rpx;
+}
+.SImgWeather{
+  width:30rpx;
+  height:23rpx;
+  margin:30rpx 10rpx;
+}
+.Sweather{
+  display: flex;
+}
+.SImgsm{
+  width:40rpx;
+  height:40rpx;
+  margin:20rpx 30rpx;
+}
+.banner{
+  width: 750rpx;
+	height: 300rpx;
+  margin-top:120rpx;
+}
+.slide-image{
+  width: 750rpx;
+	height: 300rpx;
+}
+.fourSelect{
+  width: 683rpx;
+  padding:36rpx 32rpx 0 32rpx;
+  display:flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ededed;
+}
+.bmSelect{
+  /* width: 683rpx; */
+  /* padding:36rpx 32rpx 0 32rpx; */
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:20rpx;
+}
+.SimgTxt{
+  width:104rpx;
+  height: 155rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.SimgTxtBm{
+  width:182rpx;
+  height: 155rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.SfourImg{
+  width: 97rpx;
+	height: 96rpx;
+}
+.Stext{
+  font-size: 26rpx;
+  /* padding-bottom:10rpx; */
+}
+/* .downSel{
+  width: 120rpx;
+	height: 4rpx;
+	background-color: #68b5f7;
+} */
+.active{
+  color: #68b5f7;
+  border-bottom:4rpx solid #68b5f7;
+}
+.twoTit{
+  margin:0 32rpx;
+  width: 686px;
+	height: 89rpx;
+  line-height: 89rpx;
+}
+.xzkThree{
+  width:420rpx;
+  height: 89rpx;
+  /* line-height: 89rpx; */
+  
+  margin:0 32rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+  margin-top:30rpx;
+}
+.tActive{
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.content{
+  margin:0rpx 32rpx;
+}
+.hangPt{
+  display: flex;
+  justify-content: space-between;
+  height: 180rpx;
+  background-color: #ffffff;
+  border-bottom: 1rpx solid #ededed;
+}
+.cImg{
+  padding:20rpx 0;
+  width: 140rpx;
+	height: 140rpx;
+	border-radius: 20rpx;
+}
+.txtpt{
+  width: 504rpx;
+  height:140rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+}
+.datetp{
+  color:#999999;
+}
+/* 益农培训 */
+.yntran{
+  margin:20rpx 32rpx;
+}
+.ynThreetit{
+  display: flex;
+  justify-content: space-between;
+}
+.ynImg{
+  width: 215rpx;
+	height: 180rpx;
+  box-shadow: 0rpx 0rpx 13rpx 0rpx 
+		rgba(10, 3, 5, 0.12);
+}
+.tranClass{
+  /* margin:20rpx 32rpx 0 32rpx; */
+  height:89rpx;
+  line-height:89rpx;
+}
+.marginLR{
+  margin:0 32rpx;
+}
+.wqpxImg{
+  width:42rpx;
+  height: 24rpx;
+  margin-top:32rpx;
+}
+.pxbbm{
+  height:30rpx;
+}
+.ynLeft{
+  font-size: 30rpx;
+}
+.ynRight{
+  color: #68b5f7;
+}
+.keTranBname{
+  height: 200rpx;
+  border-bottom: 1rpx solid #ededed;
+}
+.titNy{
+  height:70rpx;
+  font-size: 28rpx;
+  line-height: 70rpx;
+}
+.tranlei{
+  width: 160rpx;
+	height: 40rpx;
+  text-align: center;
+  color: #68b5f7;
+  line-height: 40rpx;
+	border-radius: 10rpx;
+	border: solid 1rpx #68b5f7;
+}
+.dateNy{
+  line-height: 48rpx;
+  color: #999999;
+}
+.timeAC{
+  line-height: 80rpx;
+  padding:16rpx 0;
+}
+.RkbmName{
+  width: 140rpx;
+	height: 50rpx;
+  line-height: 50rpx;
+  color:white;
+  text-align: center;
+	background-color: #68b5f7;
+	border-radius: 10rpx;
+}
+.shopContent{
+  display:flex;
+  flex-wrap:wrap;
+  margin:0 11rpx 20rpx 11rpx;
+}
+.commodity{
+  width: 333rpx;
+	height: 340rpx;
+	background-color: #ffffff;
+	box-shadow: 0rpx 0rpx 14rpx 0rpx 
+		rgba(0, 0, 0, 0.1);
+	border-radius: 10rpx;
+  margin:16rpx;
+}
+.ShopOne{
+  width: 293rpx;
+	height: 220rpx;
+	border-radius: 10rpx;
+  padding:20rpx;
+}
+.shopName{
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  padding:0 20rpx;
+  margin-bottom:10rpx;
+}
+.shopMoney{
+  font-size: 26rpx;
+  color: #68b5f7;
+  padding:0 20rpx;
+}
+.tkBox{
+  position: fixed;
+  width:100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background:rgba(4, 6, 23, 0.4);
+}
+.tkContent{
+  width: 600rpx;
+	height: 340rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+  position: absolute;
+  left:75rpx;
+  top:390rpx;
+  z-index:10;
+}
+.remove{
+  width: 32rpx;
+	height: 32rpx;
+  position: absolute;
+  right:20rpx;
+  top:20rpx;
+}
+.tkTxt{
+  width:300rpx;
+  height:217rpx;
+  margin:0 auto;
+  text-align: center;
+  line-height: 217rpx;
+  font-size: 28rpx;
+}
+.tkbuttom{
+  width: 260rpx;
+	height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+	background-color: #68b5f7;
+	border-radius: 10rpx;
+  color: #ffffff;
+  text-align: center;
+  margin:0 auto;
+}

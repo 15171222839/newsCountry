@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="newsInc">
+  <view class="title">
+    <view class="Scity">
+      <image class="SImg" src='../../../../assets/images/index/icon-loc.png'></image>
+      <picker class="Sxian" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{region[2]}}
+        </view>
+      </picker>
+      <image class="SImgx" src='../../../../assets/images/index/icon-drop-down@2x.png'></image>
+      
+    </view>
+    <view class="Sweather">
+      <image class="SImgWeather" src='../../../../assets/images/index/icon-weather.png'></image>
+      <view>多云28°C</view>
+    </view>
+    <view class="Scode">
+      <image class="SImgsm" src='../../../../assets/images/index/icon-sm.png'></image>
+    </view>
+  </view>
+  <view class="banner">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="fourSelect" >
+    <navigator class="SimgTxt" wx:for="{{img1}}" wx:key="index" url='{{item.http}}' hover-class="navigator-hover">
+      <image class="SfourImg" src="{{item.src}}"></image>
+      <view class="Stext {{(item.id == 1) ? 'active' : ''}}">{{item.text}}</view>
+    </navigator>
+  </view>
+  <view class="twoTit">
+    <view class="xzkThree" bindtap='clickBtn'>
+      <view id="two1" class="tActive">农业新闻</view>
+      <view id="two2">惠农政策</view>
+      <view id="two3">农业科技</view>
+    </view>
+  </view>
+  <view class="content">
+    <view class="hangPt">
+      <image class="cImg" src='../../../../assets/images/index/pic1.png'></image>
+      <view class="textAdate">
+        <view class="txtpt twoKit">葡萄园里采摘热，农产品实现来源可查去向可追...</view>
+        <view class="datetp">2019-10-08</view>
+      </view>
+    </view>
+    <view class="hangPt">
+      <image class="cImg" src='../../../../assets/images/index/pic1.png'></image>
+      <view class="textAdate">
+        <view class="txtpt twoKit">葡萄园里采摘热，农产品实现来源可查去向可追...</view>
+        <view class="datetp">2019-10-08</view>
+      </view>
+    </view>
+    
+  </view>
+</view>

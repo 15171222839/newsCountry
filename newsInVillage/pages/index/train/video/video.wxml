@@ -1,0 +1,9 @@
+<!--pages/index/train/video/video.wxml-->
+<view class="video">
+  <view class="videoTxt" wx:for='{{video}}' wx:key="index">
+    <video wx:if="{{item.srcUrl.length > 50}}" class="startVideo" src="{{item.srcUrl}}"> </video>
+    <image wx:if="{{item.srcUrl.length < 50}}" class="startVideo" src="{{item.srcUrl}}"></image>
+    <view class="p-eclipse">{{item.text}}</view>
+  </view>
+  <view class="twoVideo"></view>
+</view>

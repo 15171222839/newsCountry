@@ -1,0 +1,195 @@
+<!--index.wxml-->
+<view class="newsInc">
+  <view class="iSeach">
+    <view class="title">
+      <view class="Scity">
+        <image class="SImg" src='../../../assets/images/index/icon-loc.png'></image>
+        <picker class="Sxian" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+            {{region[2]}}
+          </view>
+        </picker>
+        <image class="SImgx" src='../../../assets/images/index/icon-drop-down@2x.png'></image>
+      </view>
+      <view class="Sweather">
+        <image class="SImgWeather" src='../../../assets/images/index/icon-weather.png'></image>
+        <view>多云28℃</view>
+        <!-- <view>{{weather.weather.data}}{{weather.temperature.data}}℃</view> -->
+      </view>
+      <view class="Scode">
+        <image class="SImgsm" bindtap='scanCode' src='../../../assets/images/index/icon-sm.png'></image>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 轮播 -->
+  <view class="banner">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 一级标题 公益服务-->
+  <view class="fourSelect" >
+    <view wx:for="{{img1}}" wx:key="index">
+      <view id="{{index}}" class="SimgTxt Stext {{activeIndex == index ? 'active' : ''}}" bindtap="tabClick">
+        <image class="SfourImg" src="{{item.src}}"></image>
+        <view>{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+  <view >
+    <view class="weui-navbar">
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="xzkThree">
+            <block wx:for="{{tab1}}" wx:key="*this">
+              <view>
+                <view id="{{index}}" class="txt {{activeIndex1 == index ? 'tActive' : ''}}" bindtap="tabClick1">{{item}}</view>
+                <image wx:if="{{activeIndex1 == index}}" class="cbImg" src='../../../assets/images/index/icon-xzhk.png'></image>
+              </view>
+              
+              <!-- <view id="two1" class="tActive">农业新闻</view>
+              <view id="two2">惠农政策</view>
+              <view id="two3">农业科技</view> -->
+            </block>
+          </view>
+          <view class="content">
+            <view wx:for="{{newsTxt}}" wx:key="index">
+              <view class="hangPt" bindtap='btnDetail' data-id="{{item.id}}">
+                <image class="cImg" src='{{item.picture}}'></image>
+                <view class="textAdate">
+                  <view class="txtpt twoKit">{{item.title}}</view>
+                  <view class="datetp">{{item.createTime}}</view>
+                </view>
+              </view>
+            </view>
+
+            
+          </view>
+        </view>
+        </view>
+        <!-- 益农培训 -->
+        <view class="weui-tab__content yntran" hidden="{{activeIndex != 1}}">
+          <view class="ynThreetit">
+            <navigator url="../train/knowledge/knowledge">
+              <image class="ynImg" src='../../../assets/images/images/yn1.png'></image>
+            </navigator>
+            <navigator url="../train/expert/expert">
+              <image class="ynImg" src='../../../assets/images/images/yn2.png'></image>
+            </navigator>
+            <navigator url="../train/video/video">
+              <image class="ynImg" src='../../../assets/images/images/yn3.png'></image>
+            </navigator>
+          </view>
+          <view class="tranClass flexT">
+            <view class="ynLeft">
+              <view class="pxbbm">培训班报名</view>
+              <image class="cbImg" src='../../../assets/images/index/icon-xzhk.png'></image>
+            </view>
+            <navigator style='display:flex;' url="../train/goTrain/goTrain" class="ynRight">
+              <view>往期培训 </view>
+              <image class="wqpxImg" src='../../../assets/images/index/wqpx.jpg'></image>
+            </navigator>
+            
+          </view>
+          <view class="keBnane">
+            <view class="keTranBname">
+              <view class="titNy">民宿经济从业人员中式面点师职业技能培训</view>
+              <view class="tranlei">中式面点师</view>
+              <view class="timeAC flexT">
+                <view class="dateNy">2019/11/18-2019/11/30</view>
+                <navigator url="../train/trainClass/trainClass" class="RkbmName">可报名</navigator>
+              </view>
+            </view>
+            <view class="keTranBname">
+              <view class="titNy">种植大户种植技能培训</view>
+              <view class="tranlei">种植技能培训</view>
+              <view class="timeAC flexT">
+                <view class="dateNy">2019/11/18-2019/11/30</view>
+                <navigator url="../train/trainClass/trainClass" class="RkbmName">可报名</navigator>
+              </view>
+            </view>
+            
+          </view>
+        </view>
+        <!-- 益农商城 -->
+        <view class="weui-tab__content " hidden="{{activeIndex != 2}}">
+          <view class="tranClass flexT marginLR">
+            <view class="ynLeft">
+              <view class="pxbbm">益农超市</view>
+              <image class="cbImg" src='../../../assets/images/index/icon-xzhk.png'></image>
+            </view>
+            <view class="ynRight flexT">
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                  {{array[index]}}
+                </view>
+              </picker>
+              <image class="SImgxShop" src='../../../assets/images/index/icon-drop-down2@2x.png'></image>
+            </view>
+          </view>
+          <view class="shopContent">
+            <view class="commodity">
+              <image class="ShopOne" src='../../../assets/images/images/shop1.jpg'></image>
+              <view class="shopName">统一方便面一箱</view>
+              <view class="shopMoney">¥66.00</view>
+            </view>
+            <view class="commodity">
+              <image class="ShopOne" src='../../../assets/images/images/shop2.jpg'></image>
+              <view class="shopName">大白洗衣液</view>
+              <view class="shopMoney">¥26.00</view>
+            </view>
+            <view class="commodity">
+              <image class="ShopOne" src='../../../assets/images/images/shop2.jpg'></image>
+              <view class="shopName">大白洗衣液</view>
+              <view class="shopMoney">¥26.00</view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <view class="tranClass flexT marginLR">
+            <view class="ynLeft">
+              <view class="pxbbm">便民服务</view>
+              <image class="cbImg" src='../../../assets/images/index/icon-xzhk.png'></image>
+            </view>
+            <view class="ynRight flexT">
+              <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+                <view class="picker">
+                  {{array1[index1]}}
+                </view>
+              </picker>
+              <image class="SImgxShop" src='../../../assets/images/index/icon-drop-down2@2x.png'></image>
+            </view>
+          </view>
+
+          <view class="bmSelect" >
+            <view class="SimgTxtBm" wx:for="{{img}}" wx:key="index" >
+              <image class="SfourImg" src="{{item.src}}"></image>
+              <view id="{{index}}" >
+                  <view class="weui-navbar__title">{{item.text}}</view>
+              </view>
+            </view>
+          </view>
+
+
+        </view>
+    </view>
+
+
+  </view>
+  <!-- 弹框样式 -->
+  <view wx:if="{{is_show == 1}}">
+    <view class="tkBox"></view>
+    <view class="tkContent">
+      <image class="remove" bindtap='remove' src='../../../assets/images/index/icon-close.png'></image>
+      <view class="tkTxt">白云村村委会益农社</view>
+      <button class="tkbuttom" bindgetuserinfo='btn_sub' open-type="getUserInfo">加入</button>
+    </view>
+  </view>

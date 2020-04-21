@@ -1,0 +1,39 @@
+/* pages/index/train/knowledge/knowledge.wxss */
+page{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  background:rgb(242,242,242);
+}
+/*文字两行溢出*/
+.eclipse-two{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp:2;
+	-webkit-box-orient: vertical;
+}
+.knowK{
+  margin:20rpx 32rpx;
+}
+.knowTit{
+  /* width: 686rpx; */
+	height: 180rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  padding:30rpx;
+}
+.knowTxt{
+  height:96rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #333333;
+}
+.nowDate{
+  margin-top:32rpx;
+  font-size: 22rpx;
+  color: #999999;
+}

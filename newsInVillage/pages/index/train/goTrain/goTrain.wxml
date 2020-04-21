@@ -1,0 +1,11 @@
+<!--pages/index/train/goTrain/goTrain.wxml-->
+<view class="goTrain">
+  <view class="knowTit" wx:for="{{txt}}" wx:key="index">
+    <view class="tit">{{item.tit}}</view>
+    <view class="classType">{{item.type}}</view>
+    <view class="dateDetail flexT">
+      <view class="nowDate">{{item.date}}</view>
+      <view class="details" bindtap='btnPage'>{{item.detail}}</view>
+    </view>
+  </view> 
+</view>

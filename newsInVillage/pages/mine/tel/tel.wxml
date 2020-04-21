@@ -1,0 +1,48 @@
+<!--pages/mine/tel/tel.wxml-->
+<view class="telBd">
+  <view class="telCode">
+    <view class="tel flexT">
+      <view style='display:flex;'>
+        <view class="telPhoto">手机号：</view>
+        <input placeholder='请输入新手机号'></input>
+      </view>
+      <view class="yzCode">获取验证码</view>
+    </view>
+    <view class="tel flexT">
+      <view style='display:flex;'>
+        <view class="telPhoto">验证码：</view>
+        <input placeholder=''></input>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="telCode">
+    <view class="tel flexT">
+      <view style='display:flex;'>
+        <view class="telPhoto">原手机号：</view>
+        <input placeholder='13956985664' disabled="true"></input>
+      </view>
+      <view class="yzCode">获取验证码</view>
+    </view>
+    <view class="tel flexT">
+      <view style='display:flex;'>
+        <view class="telPhoto">验证码：</view>
+        <input placeholder=''></input>
+      </view>
+    </view>
+    <view class="tel flexT">
+      <view style='display:flex;'>
+        <view class="telPhoto">新手机号：</view>
+        <input placeholder='请输入新手机号'></input>
+      </view>
+      <view class="yzCode">获取验证码</view>
+    </view>
+    <view class="tel flexT">
+      <view style='display:flex;'>
+        <view class="telPhoto">验证码：</view>
+        <input placeholder=''></input>
+      </view>
+    </view>
+  </view> -->
+  <view class="tjbtn">提交</view>
+</view>

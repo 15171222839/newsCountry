@@ -1,0 +1,13 @@
+index   //首页
+market   //市场行情
+farm     //益农社
+
+mine     //我的
+  tel          //绑定手机
+  mineTrain    //我的培训
+  news         //消息
+  farmS        //我的益农社
+  Consultation  //益农社信息员
+
+  "pages/index/publicService/policy/policy",   //语音模块
+  "pages/index/publicService/kj/kj",           //模板推送消息

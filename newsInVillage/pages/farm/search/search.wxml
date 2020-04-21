@@ -1,0 +1,26 @@
+<!--pages/farm/search/search.wxml-->
+<view class="market">
+  <view class="meFollow">
+    <view class="FSeach">
+      <view class="iSeach">
+        <input class="search" placeholder='搜索品种'></input>
+        <image class="ScImg" src='../../../assets/images/schq/icon-4.png'></image>
+      </view>
+    </view>
+    <view style='margin-top:100rpx;'>
+      <view class="news" wx:for="{{content}}" wx:key="index"  >
+        <view class="newsTxt twoKit" data-location="{{item.txt}}" bindtap='placeChoose'>{{item.txt}}</view>
+        <view class="numDate flexT">
+          <view bindtap='btnZan' id="{{index}}" bindtap='titBtn' data-id='{{item._id}}' data-index='{{index}}'>
+            <image wx:if="{{item.zan == '0' }}" class="zanImg" src='../../../assets/images/nys/zanHui.png'></image>
+            <image wx:if="{{item.zan == '1' }}" class="zanImg" src='../../../assets/images/nys/zanBlue.png'></image>
+            <text>{{item.num}}</text> 
+          </view>
+          <view>{{item.date}}</view>
+        </view>
+      </view>
+    </view>
+    
+
+  </view>
+</view>

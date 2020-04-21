@@ -1,0 +1,35 @@
+<!--pages/market/search/search.wxml-->
+<view class="market">
+  <view class="meFollow">
+    <view class="FSeach">
+      <view class="iSeach">
+        <input class="search" placeholder='搜索品种'></input>
+        <image class="ScImg" src='../../../assets/images/schq/icon-4.png'></image>
+      </view>
+    </view>
+    <view class="hosity flexT">
+      <view class="leftSeach" bindtap='Sxhis'>
+        <text>历史搜索</text>
+        <image class="SImgx" src='../../../assets/images/index/icon-drop-down@2x.png'></image>
+      </view>
+      <view class="rightSeach leftSeach" bindtap='ckRemove'>
+        <image class="SImgxBig" src='../../../assets/images/schq/icon-2.png'></image>
+        <text>清空</text>
+      </view>
+    </view>
+    <!-- 历史内容 -->
+    <view class="vegHosity" wx:if="{{show}}">
+      <view class='vegBox p-eclipse' wx:for="{{his}}" wx:key="index">{{item.txt}}</view>
+    </view>
+    <!-- 内容部分 -->
+    <view class="ssContent">
+      <view class="waterGz flexT" wx:for="{{con}}" wx:key="index">
+        <view>{{item.txt}}</view>
+        <view class="follow {{index == 0 ? 'ageGz' : ''}}">{{item.gz}}</view>
+      </view>
+    </view>
+
+
+
+  </view>
+</view>

@@ -1,0 +1,222 @@
+/* pages/index/publicService/policy/policy.wxss */
+/* pages/farm/newsDetails/newsDetails.wxss */
+page{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  background:rgb(242,242,242);
+  font-size: 26rpx;
+}
+/* flex 弹性盒子 */
+.flexT{
+  display:flex;
+  justify-content: space-between;
+}
+/* 单行省略 */
+.p-eclipse{
+  width: 100%;overflow: hidden;white-space:nowrap;
+  text-overflow:ellipsis;-o-text-overflow:ellipsis;
+}
+/* 两行省略号 */
+.twoKit{
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.newDetails{
+  
+}
+.tzNews{
+  width: 686rpx;
+	height: 140rpx;
+  line-height: 48rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+  border-top:1rpx solid #ededed; 
+  padding:20rpx 32rpx;
+  display: flex;
+}
+.playg{
+  width: 60rpx;
+  height:60rpx;
+}
+.zanPic{
+  width:80rpx;
+  height:50rpx;
+}
+.playTxt{
+  width:474rpx;
+  margin:0 24rpx;
+}
+.twoTxt{
+  height:90rpx;
+}
+.colorTxt{
+  font-size: 22rpx;
+  color: #999999;
+}
+.ltContent{
+  width:686rpx;
+  /* height:930rpx; */
+  height:1090rpx;
+  padding:20rpx 32rpx;
+  /* border: 1rpx solid red; */
+}
+.ltNew{
+  width:750rpx;
+  height:550rpx;
+}
+.down{
+  border-top:1rpx solid #ededed;
+  width: 686rpx;
+	height: 58rpx;
+	background-color: #fafafa;
+  position: fixed;
+  left:0;
+  bottom:0;
+  padding:20rpx 32rpx;
+}
+.jianPan{
+  width:32rpx;
+  height:32rpx;
+  margin-top:14rpx;
+}
+.inputTxt{
+  width: 522rpx;
+	height: 60rpx;
+	background-color: #ffffff;
+	border-radius: 5rpx;
+  margin:0 20rpx;
+  padding-left:20rpx;
+}
+.send{
+  width: 80rpx;
+	height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+	background-color: #68b5f7;
+	border-radius: 5rpx;
+  font-size: 26rpx;
+  color: #ffffff;
+}
+.yyAtxt{
+  border-top:1rpx solid #ededed;
+  /* width: 686rpx; */
+  height:230rpx;
+  position: fixed;
+  left:0;
+  bottom:0;
+  /* padding:20rpx 32rpx; */
+}
+.yyDown{
+  display: flex;
+  width: 750rpx;
+  height: 98rpx;
+  background-color: #fafafa;
+	
+}
+.mryy{
+  width:32rpx;
+  height: 28rpx;
+  margin:36rpx 20rpx 0rpx 28rpx;
+}
+.azSaid{
+  margin-top:18rpx;
+  width: 600rpx;
+	height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+	background-color: #ffffff !important;
+	box-shadow: 1rpx 2rpx 2rpx 0rpx 
+		rgba(0, 0, 0, 0.13);
+	border-radius: 5rpx;
+  font-size: 26rpx;
+  color: #333333 !important;
+}
+.everyYY{
+  position: fixed;
+  left:0;
+  bottom:0;
+}
+.primary{
+  width:230rpx;
+  height:40rpx;
+  position:absolute;
+  left:120rpx;
+  top:540rpx;
+}
+.fgaudio{
+  width:750rpx;
+  height:300rpx;
+  position: absolute;
+  left:0;
+  bottom:200rpx;
+  background:rgb(242,242,242) !important;
+}
+.newOne{
+  /* height:90rpx; */
+  height: 140rpx;
+  width:682rpx;
+  display: flex;
+  margin-top:10rpx;
+}
+.newTxt{
+  height:90rpx;
+  width:620rpx; 
+}
+.bannerIMg{
+  width: 60rpx;
+	height: 60rpx;
+  border-radius: 50%;
+}
+.newXx,.newDate{
+  color:grey;
+}
+button {
+  padding-left:0;
+  padding-right:0;
+}
+.newName1{
+  text-align: right;
+}
+
+.myLuYin{
+  height: 60rpx;
+  background: #fff;
+  border-radius:6rpx;
+  margin: 15rpx 0; 
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: grey;
+}
+
+.bt{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 69;
+  height: 100rpx;
+}
+ 
+.btTouch{
+  background: #e2e2e2 !important;
+  color: #333333 !important;
+   width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 69;
+  height: 100rpx;
+}
+.zanPicyy{
+  width:16rpx;
+  height:22rpx;
+  float: left;
+  margin:20rpx 0 0 20rpx;
+}

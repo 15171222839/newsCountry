@@ -1,0 +1,12 @@
+<!--pages/mine/xTnews/xTnews.wxml-->
+<view class="xTnews">
+  <view class="tit twoKit">{{tit}}</view>
+  <view class="date">2019-11-21</view>
+  <!-- <image class="cImg" src='../../../assets/images/images/picTit.jpg'></image> -->
+  <view class="content">
+    <view class="Stxt">{{content1}}</view>
+    <!-- <view class="txt" wx:for="{{contxt}}" wx:key="index">{{item.txt}}</view> -->
+    <view class="Stxt">{{content2}}</view>
+    <view class="Stxt">{{content3}}</view>
+  </view>
+</view>

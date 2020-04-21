@@ -1,0 +1,11 @@
+<!--pages/index/publicService/kj/kj.wxml-->
+<!-- <text>pages/index/publicService/kj/kj.wxml</text> -->
+<!-- <button type='primary' bindtap='getOpenid'>获取用户openid</button>
+<text>{{openid}}</text> -->
+
+<!-- <form bind:submit="subMsg" report-submit="true">
+      <button formType="submit">发送模板消息</button>
+ </form> -->
+ <form bind:submit="subMsg" report-submit="true">
+      <button formType="submit">发送模板消息</button>
+ </form>

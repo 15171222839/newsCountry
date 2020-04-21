@@ -1,0 +1,85 @@
+/* pages/farm/search/search.wxss */
+page{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  background:rgb(242,242,242);
+  font-size: 26rpx;
+}
+/* flex 弹性盒子 */
+.flexT{
+  display:flex;
+  justify-content: space-between;
+}
+/* 单行省略 */
+.p-eclipse{
+  width: 100%;overflow: hidden;white-space:nowrap;
+  text-overflow:ellipsis;-o-text-overflow:ellipsis;
+  }
+.market{
+  border-top:1px solid #ededed;
+}
+.meFollow{
+  padding:30rpx 32rpx;
+}
+.search{
+  width: 606rpx;
+	height: 80rpx;
+	background-color: #e2e2e2;
+	border-radius: 40rpx;
+  padding:0 40rpx;
+}
+.FSeach{
+  width:100%;
+  height:120rpx;
+  position:fixed;
+  top:0rpx;
+  left:0rpx;
+  background:rgb(242,242,242);
+  z-index:9;
+  border-top:1rpx solid #ededed;
+}
+.iSeach{
+  margin-top:20rpx;
+  margin-left:32rpx;
+}
+.ScImg{
+  position: fixed;
+  width:32rpx;
+  height:32rpx;
+  right:64rpx;
+  top:44rpx;
+  z-index: 10;
+}
+
+.zanImg{
+  width:24rpx;
+  height:28rpx;
+  margin-right: 10rpx;
+}
+.wdgz{
+  font-weight: 700 ;
+}
+.wdgzFb{
+  color:#68b5f7;
+}
+.news{
+  width: 638rpx;
+	height: 128rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+  padding:26rpx 24rpx;
+  margin-bottom:20rpx;
+}
+.newsTxt{
+  height:96rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+}
+.numDate{
+  font-size: 22rpx;
+  color: #999999;
+  line-height: 48rpx;
+}

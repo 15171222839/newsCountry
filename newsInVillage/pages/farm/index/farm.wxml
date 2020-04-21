@@ -1,0 +1,96 @@
+<!--pages/farm/farm.wxml-->
+<view class="market">
+  <view class="meFollow">
+    <view class="FSeach flexT">
+      <view class="country Scity">
+        <!-- <view class="Scity"> -->
+        <image class="SImg" src='../../../assets/images/index/icon-loc.png'></image>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+        <image class="SImgx" src='../../../assets/images/index/icon-drop-down@2x.png'></image>
+      <!-- </view> -->
+      </view>
+      <view class="iSeach">
+        <input class="search" bindfocus="getSearch" placeholder='搜索' bindfocus="getSearch"></input>
+        <image class="ScImg" src='../../../assets/images/schq/icon-4.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <view class="flexT">
+      <view class="imgFollow">
+        <image class="wdgzImg" src='../../../assets/images/nys/sqNews.png'></image>
+        <view class="wdgz">社群消息</view>
+      </view>
+      <view class="imgFollow" bindtap='btnAdd' wx:if="{{newShow}}">
+        <image class="wdgzImg" src='../../../assets/images/nys/fbNews.png'></image>
+        <view class="wdgzFb">发布消息</view>
+      </view>
+    </view>
+    <view class="news" wx:for="{{content}}" wx:key="index">
+      <view class="newsTxt twoKit" data-location="{{item.txt}}" bindtap='placeChoose'>{{item.txt}}</view>
+      <view class="numDate flexT">
+        <view bindtap='btnZan' id="{{index}}"  bindtap='titBtn' data-id='{{item._id}}' data-index='{{index}}'>
+          <image wx:if="{{item.zan == '0' }}" class="zanImg" src='../../../assets/images/nys/zanHui.png'></image>
+          <image wx:if="{{item.zan == '1' }}" class="zanImg" src='../../../assets/images/nys/zanBlue.png'></image>
+          <text>{{item.num}}</text> 
+        </view>
+        <view>{{item.date}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 判断登录弹框 -->
+  <view wx:if="{{pdisShow}}">
+    <view class="tkBox"></view>
+    <view class="dLtk">
+      <view class="dLtxt">进入益农社，请先登录</view>
+      <view class="tSelectDl flexT">
+        <view class="dlAlike Ldl" bindtap='btnIndex'>我再逛逛</view>
+        <button class="dlAlike Rdl" bindgetuserinfo='btn_sub' open-type="getUserInfo">登录</button>
+      </view>
+      <image class="remove" bindtap='remove' src='../../../assets/images/index/icon-close.png'></image>
+    </view>
+  </view>
+  
+</view>
+<!-- 弹框样式 -->
+<view wx:if="{{tkShow == 1}}">
+  <view class="tkBox" bindtap='btnHide'></view>
+  <view class="tkContent">
+    <view class="tit">新消息发布</view>
+    <view class="titContent">
+      <view class="newTit">标题</view>
+      <textarea class="textSmall" placeholder='请输入标题'></textarea>
+      <view class="zero1">0/30</view>
+    </view>
+    <view class="titContent">
+      <view class="newTit" wx:if="{{isShow == 0}}">
+        <view>内容</view>
+        <image class="voice" bindtap='yyBtn' src='../../../assets/images/nys/voice2.png'></image>
+        <image class="keyboard" bindtap='jpBtn' src='../../../assets/images/nys/keyboard1.png'></image>
+      </view>
+      <view class="newTit" wx:if="{{isShow == 1}}">
+        <view>内容</view>
+        <image class="voice" bindtap='yyBtn' src='../../../assets/images/nys/voice1.png'></image>
+        <image class="keyboard" bindtap='jpBtn' src='../../../assets/images/nys/keyboard2.png'></image>
+      </view>
+      <textarea wx:if="{{isShow == 0}}" class="textBig" placeholder='请输入内容'>
+        <view class="zero2">0/50</view>
+      </textarea>
+      <view wx:if="{{isShow == 1}}">
+        <view class="said">按住说话</view>
+        <view class="saidContent">
+          <view class="yySaid">
+            <image class="voiceYY" src='../../../assets/images/nys/yy.png'></image>
+            <text>17</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="buttom" bindtap='returnBtn'>提交</view>
+  </view> 
+  
+</view>

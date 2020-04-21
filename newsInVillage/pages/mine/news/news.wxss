@@ -1,0 +1,89 @@
+/* pages/mine/news/news.wxss */
+page{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  font-size: 26rpx;
+  box-sizing: border-box;
+  background:rgb(242,242,242);
+}
+/* flex 弹性盒子 */
+.flexT{
+  display:flex;
+  justify-content: space-between;
+}
+.title{
+  border-top:1rpx solid #ededed;
+  width: 750rpx;
+  line-height: 88rpx;
+	background-color: #ffffff;
+  color: #999999;
+  display: flex;
+}
+.txt{
+  width:130rpx;
+  height: 88rpx;
+  margin:0 32rpx; 
+}
+.active{
+  color: #68b5f7;
+  border-bottom:4rpx solid #68b5f7;
+}
+.twoBox{
+  width:280rpx;
+  height:50rpx;
+  margin:20rpx auto;
+  display: flex;
+}
+.leftBox,.rightBox{
+  width: 140rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+  color: #68b5f7;
+  text-align: center;
+  border: solid 2rpx #68b5f7;
+}
+.leftBox{
+  border-radius: 10rpx 0rpx 0rpx 10rpx;
+}
+.rightBox{
+	border-radius: 0rpx 10rpx 10rpx 0rpx;
+}
+.activeB{
+  color:white;
+  background-color: #68b5f7;
+}
+.weui-tab__content{
+  width:686rpx;
+  margin:0 auto;
+}
+.wJoin{
+  width: 646rpx;
+	height: 340rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+  padding:30rpx 20rpx;
+  display:flex;
+  margin-bottom:20rpx;
+}
+.bar{
+  width: 10rpx;
+	height: 28rpx;
+	background-color: #68b5f7;
+  margin-right:10rpx;
+}
+.txtDate{
+  height:86rpx;
+  line-height: 86rpx;
+  width: 626rpx;
+  border-bottom:1rpx solid #ededed;
+  color: #666666;
+}
+.nrCont{
+  width: 646rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+  padding:30rpx 20rpx 0 20rpx;
+  margin-bottom:20rpx;
+}

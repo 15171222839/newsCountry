@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/index/index/index",
+    "pages/market/index/market",
+    "pages/farm/index/farm",
+    "pages/mine/index/mine",
+    "pages/index/publicService/news/news",
+    "pages/index/publicService/policy/policy",
+    "pages/index/publicService/kj/kj",
+    "pages/index/train/index/index",
+    "pages/index/train/knowledge/knowledge",
+    "pages/index/train/expert/expert",
+    "pages/index/train/video/video",
+    "pages/index/train/goTrain/goTrain",
+    "pages/index/train/trainClass/trainClass",
+    "pages/index/train/detail/detail",
+    "pages/index/shop/index/index",
+    "pages/index/bmService/index/index",
+    "pages/market/search/search",
+    "pages/farm/search/search",
+    "pages/farm/newsDetails/newsDetails",
+    "pages/mine/mineTrain/mineTrain",
+    "pages/mine/trainClassBm/trainClassBm",
+    "pages/mine/news/news",
+    "pages/mine/xTnews/xTnews",
+    "pages/mine/farmS/farmS",
+    "pages/mine/tel/tel",
+    "pages/mine/Consultation/Consultation"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7f8389",
+    "selectedColor": "#00a8f3",
+    "borderStyle": "black",
+    "backgroundColor": "#f7f7fa",
+    "list": [
+      {
+        "pagePath": "pages/index/index/index",
+        "text": "首页",
+        "color": "#7f8389",
+        "iconPath": "./assets/images/dbdh/tab-icon1-nor.png",
+        "selectedIconPath": "./assets/images/dbdh/tab-icon1-sel.png"
+      },
+      {
+        "pagePath": "pages/market/index/market",
+        "text": "市场行情",
+        "iconPath": "./assets/images/dbdh/tab-icon2-nor.png",
+        "selectedIconPath": "./assets/images/dbdh/tab-icon2-sel.png"
+      },
+      {
+        "pagePath": "pages/farm/index/farm",
+        "text": "益农社",
+        "iconPath": "./assets/images/dbdh/tab-icon3-nor.png",
+        "selectedIconPath": "./assets/images/dbdh/tab-icon3-sel.png"
+      },
+      {
+        "pagePath": "pages/mine/index/mine",
+        "text": "我的",
+        "iconPath": "./assets/images/dbdh/tab-icon4-nor.png",
+        "selectedIconPath": "./assets/images/dbdh/tab-icon4-sel.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于小程序接口展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

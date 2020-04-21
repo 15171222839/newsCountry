@@ -1,0 +1,43 @@
+<!--pages/mine/mineTrain/mineTrain.wxml-->
+<view class="mineTrain">
+  <view class="borderTop">
+    <view class="titile flexT">
+      <view class="pic1">
+        <image class="mineLeft" src='../../../assets/images/mine/ywc.png'></image>
+        <view class="txt">
+          <view>1000</view>
+          <view>已完成</view>
+        </view>
+      </view>
+      <view class="pic2">
+        <image class="mineLeft" src='../../../assets/images/mine/ywc2.png'></image>
+        <view class="txt">
+          <view>200</view>
+          <view>累计天数</view>
+        </view>
+      </view>
+      <view class="pic3">
+        <image class="mineLeft" src='../../../assets/images/mine/ywc3.png'></image>
+        <view class="txt">
+          <view>5</view>
+          <view>获得证书</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="twoBox">
+    <view class="leftBox {{btnIndex == 0 ? 'active' : ''}} " bindtap='btnClick1'>预报名</view>
+    <view class="rightBox {{btnIndex == 1 ? 'active' : ''}}" bindtap='btnClick2'>已完成</view>
+  </view>
+  
+  <view class="goTrain">
+    <view class="knowTit" wx:for="{{txt}}" wx:key="index">
+      <view class="tit">{{item.tit}}</view>
+      <view class="classType">{{item.type}}</view>
+      <view class="dateDetail flexT">
+        <view class="nowDate">{{item.date}}</view>
+        <view class="details" bindtap='tzPage'>{{item.detail}}</view>
+      </view>
+    </view> 
+  </view>
+</view>

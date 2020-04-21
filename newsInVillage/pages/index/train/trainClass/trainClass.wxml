@@ -1,0 +1,31 @@
+<!--pages/index/train/trainClass/trainClass.wxml-->
+<view class="trainClass">
+  <view class="tableMan">
+    <view class="tableTit">创业人员农村居家养老护理员技能培训</view>
+    <view class="tableContent" >
+      <view wx:for="{{txt}}" wx:key="index" class="pxTit {{index == 0 ? 'Stit' : ''}} " >
+        <view class="major" >{{item.tit}}</view>
+        <view class="nursing">{{item.type}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{forecast == 0}}">
+    <view class="namePhoto">
+      <view class="className">
+        <text>报名姓名：</text>
+        <input type='text' class="inputP" placeholder='请输入报名人姓名'></input>
+      </view>
+      <view class="classPhoto">
+        <text>联系手机：</text>
+        <input type='text' class="inputP" placeholder='请输入手机号码' bindinput='usernameInput' value='{{telTxt}}'></input>
+      </view>
+      <view wx:if="{{telyz == 1}}" style='color:red;'>手机号码有误，请重填</view>
+    </view>
+    <view class="signUp" bindtap='btnClass'>预报名</view>
+  </view>
+  <view wx:if="{{forecast == 1}}">
+    <view class="after">授权后，获得预报名方式</view>
+    <button class="clickSq" bindgetuserinfo='btn_sub' open-type="getUserInfo">点击授权</button>
+  </view>
+  
+</view>

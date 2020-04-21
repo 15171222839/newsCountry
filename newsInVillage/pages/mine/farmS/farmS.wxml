@@ -1,0 +1,25 @@
+<!--pages/mine/farmS/farmS.wxml-->
+<view class="farmS">
+  <view class="mine">
+    <view class="tit flexT">
+      <view class="txtTit">我的益农社</view>
+      <image class="SImgx" src='../../../assets/images/mine/saomiao.png'></image>
+    </view>
+    <view class="countyT flexT {{show == 0 ? 'county' : '' }}">
+      <view class="dianTxt" bindtap='btnS'>
+        <view class="dian"></view>
+        <view>白云村委益农社</view>
+      </view>
+      <view wx:if="{{show == 0}}">默认</view>
+    </view>
+    <view class="countyT flexT {{show == 1 ? 'county' : '' }}">
+      <view class="dianTxt" bindtap='btn'>
+        <view class="dian"></view>
+        <view>白云村委益农社</view>
+      </view>
+    </view>
+    <!-- 蓝点 -->
+    <view wx:if="{{show == 0}}" class="blue"></view>
+    <view wx:if="{{show == 1}}" class="blue2"></view>
+  </view>
+</view>

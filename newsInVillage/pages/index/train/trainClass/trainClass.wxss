@@ -1,0 +1,93 @@
+/* pages/index/train/trainClass/trainClass.wxss */
+page{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  background:rgb(242,242,242);
+}
+.trainClass{
+  margin:20rpx 32rpx;
+  font-size: 26rpx;
+}
+.tableMan{
+  width: 686rpx;
+	height: 780rpx;
+	background-color: #f3f9ff;
+	border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+.tableTit{
+  height:100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  color: #000000;
+  text-align: center;
+}
+.tableContent{
+  width: 639rpx;
+  border:1rpx solid #dddddd;
+  margin:0 auto;
+}
+.pxTit{
+  width: 639rpx;
+	height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+	border-bottom: solid 1rpx #dddddd;
+  display: flex;
+}
+.major{
+  width: 224rpx;
+  height: 64rpx;
+  border-right:1rpx solid #dddddd;
+}
+.nursing{
+  width: 414rpx;
+  height: 64rpx;
+}
+.Stit{
+  color:white;
+  background-color: #68b5f7;
+}
+.namePhoto{
+  width: 686rpx;
+	height: 200rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+  margin-bottom: 50rpx;
+}
+.className{
+  height:100rpx;
+  line-height: 100rpx;
+  display: flex;
+  margin:0 20rpx;
+  border-bottom:1rpx solid #dddddd;
+}
+.classPhoto{
+  height:100rpx;
+  line-height: 100rpx;
+  display: flex;
+  margin:0 20rpx;
+}
+.inputP{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.signUp,.clickSq{
+  width: 686rpx;
+	height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+	background-color: #68b5f7;
+	border-radius: 40rpx;
+  font-size: 36rpx;
+  color: #ffffff;
+}
+.after{
+  height:230rpx;
+  width: 686rpx;
+  line-height: 358rpx;
+  text-align: center;
+}

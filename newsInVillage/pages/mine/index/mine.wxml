@@ -1,0 +1,51 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine">
+  <image class="mineTop" src='../../../assets/images/mine/top.png'></image>
+  <view class="mineContent">
+    <!-- 头像 -->
+    <image class='list_img' src='{{image}}'></image>
+    <button wx:if="{{index1 == 0}}" class="txBotton" bindgetuserinfo='btn_sub' open-type="getUserInfo">点击授权</button>
+    <view wx:if="{{index1 == 1}}" class="txTxtName">{{nickName}}</view>
+    <view class="top" wx:if="{{nickName.length < 1}}">
+      <view wx:for="{{cont}}" wx:key="index" class="lrPic " >
+        <image class="minePhoto" src='{{item.src}}'></image>
+        <view class="mTxt flexT">
+          <view>{{item.txt}}</view> 
+          <view class="grey"></view>
+        </view>
+        <image class="mineLeft" src='../../../assets/images/mine/left.png'></image>
+      </view>
+    </view>
+    <!-- 登录后 -->
+    <view class="top" wx:if="{{nickName.length > 0}}">
+      <view wx:for="{{cont}}" wx:key="index" class="lrPic " id="{{index}}" bindtap='tzPage' >
+        <image class="minePhoto" src='{{item.src}}'></image>
+        <view class="mTxt flexT">
+          <view>{{item.txt}}</view> 
+          <view class="grey" wx:if="{{index == 0}}">176***8556</view>
+        </view>
+        <image class="mineLeft" src='../../../assets/images/mine/left.png'></image>
+      </view>
+    </view>
+    
+  </view>
+
+  <view class="ynNewsMan flexT" wx:if="{{nickName.length > 0}}" bindtap='newsPage'>
+    <view class="newPic">
+      <image class="minePhoto" src='../../../assets/images/mine/nyNew.png'></image>
+      <view class="newPicTxt">益农社信息员</view>
+    </view>
+    <image class="minePhoto" src='../../../assets/images/mine/code.png' bindtap='btnCode'></image>
+  </view>
+  <!-- 二维码弹窗 -->
+  <view wx:if="{{code == 1}}">
+    <view class="tkBox"></view>
+    <view class="tkContent">
+      <view class="codeBack">
+        <image class="CodePhoto" src='../../../assets/images/mine/code.png' bindtap='btnCode'></image>
+      </view>
+      <view class="codeTxt">白云村益农社</view>
+      <image class="remove" bindtap='remove' src='../../../assets/images/index/icon-close.png'></image>
+    </view>
+  </view>
+</view>

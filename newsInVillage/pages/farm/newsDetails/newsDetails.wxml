@@ -1,0 +1,99 @@
+<!--pages/index/publicService/policy/policy.wxml-->
+<!-- <text>pages/index/publicService/policy/policy.wxml</text> -->
+<view class="newDetails">
+  <view class="tzNews">
+    <image class="playg" src='../../../assets/images/nys/playg.png'></image>
+    <view class="playTxt ">
+      <view class="twoTxt twoKit">{{tit}}</view>
+      <view class="colorTxt">2019-08-10</view>
+    </view>
+    <image class="zanPic" src='../../../assets/images/nys/zanPic.png'></image>
+  </view>
+  <scroll-view class="ltContent" scroll-y bindscrolltoupper="upper" bindscrolltolower="lower">
+    <loading hidden="{{loadingHidden}}">
+    加载中...
+    </loading>
+    <view wx:for="{{new}}" wx:key="index">
+      <view wx:if="{{(new.length-num) < index && index < new.length}}">
+        <view class="newOne flexT" wx:if="{{item.name != name && item.srcUrl.length < 1}}">
+          <view style='display: flex;'>
+            <image class="bannerIMg" src="{{item.src}}"></image>
+            <view class="newName">
+              <view>{{item.name}}</view>
+              <view class="newXx">{{item.txt}}</view>
+            </view>
+          </view>
+          <view class="newDate">{{item.date}}</view>
+        </view>
+        <view class="newOne flexT" wx:if="{{item.name == name && item.srcUrl.length < 1}}">
+          <view class="newDate">{{item.date}}</view>
+          <view style='display: flex;'>  
+            <view class="newName1">
+              <view>{{item.name}}</view>
+              <view class="newXx">{{item.txt}}</view>
+            </view>
+            <image class="bannerIMg" src="{{item.src}}"></image>
+          </view>
+        </view>
+
+        <view class="newOne flexT" wx:if="{{item.srcUrl.length > 1}}">
+          <view class="newDate">{{item.date}}</view>
+          <view style='display: flex;'>  
+            <view class="newName1">
+              <view>{{item.name}}</view>
+              <view   style='width:{{item.width+200}}rpx' bindtap="audioPlay" data-src="{{item.srcUrl}}" class='myLuYin'>
+                <image class="zanPicyy" src='../../../assets/images/nys/yy.png'></image>
+              </view>
+              <!-- <view   style='width:{{item.width+200}}rpx' bindtap="audioPlay" data-src="{{item.src}}" class='myLuYin'>录音{{index+1}}</view> -->
+            </view>
+            <image class="bannerIMg" src="{{item.src}}"></image>
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+    
+  </scroll-view>
+  
+  <!-- 语音，文字 -->
+  <view class="yyAtxt" wx:if="{{twoOne == 0}}">
+    <view class="yyDown" bindtap='said'>
+      <image class="mryy" src='../../../assets/images/nys/mryy.png'></image>
+      <botton class="azSaid">按住说话</botton>
+    </view>
+    <view class="down" style='display:flex;' bindtap='text'>
+      <image class="jianPan" src='../../../assets/images/nys/mrjian.png'></image>
+      <input class="inputTxt" placeholder='请输入文字'></input>
+      <view class="send">发送</view>
+    </view>
+  </view>
+  <!-- 语音输入 -->
+  <view class="yyDown everyYY" wx:if="{{twoOne == 1}}">
+    <image bindtap='text' class="mryy" src='../../../assets/images/nys/mrjian.png'></image>
+    <!-- <botton class="azSaid">按住说话</botton> -->
+
+<button class="{{luStatu?'azSaid':'azSaid'}}"  bind:touchstart="touchStart"bind:touchend="touchEnd"  type='primary'>    <text wx:if="{{luStatu}}">松开结束</text> <text wx:else>按住说话 </text>     </button>
+
+  </view>
+  <!-- 文字输入keyboard1 -->
+  <view class="down" style='display:flex;' wx:if="{{twoOne == 2}}">
+      <image bindtap='said' class="jianPan" src='../../../assets/images/nys/mryy.png'></image>
+      <input class="inputTxt" placeholder='请输入文字' bindinput='usernameInput' value='{{telTxt}}'></input>
+      <button class="send" bindgetuserinfo='btn_sub' open-type="getUserInfo">发送</button>
+  </view>
+</view>
+
+
+
+
+<!-- <view class='body'>
+   <view class='center'>
+   <block wx:for="{{list}}">
+      <view   style='width:{{item.width+200}}rpx' bindtap="audioPlay" data-src="{{item.src}}" class='myLuYin'>录音{{index+1}}</view>
+   </block>
+   </view>
+</view>
+ 
+ 
+<button class="{{luStatu?'btTouch':'bt'}}"  bind:touchstart="touchStart"bind:touchend="touchEnd"  type='primary'>    <text wx:if="{{luStatu}}">松开结束</text> <text wx:else>按住说话 </text>     </button> -->

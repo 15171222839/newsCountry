@@ -1,0 +1,43 @@
+<!--pages/index/train/expert/expert.wxml-->
+<view class="expert">
+  <view class="zjLeft">
+    <view wx:for="{{tabs}}" wx:key="*this">
+      <view id="{{index}}" class="nav {{activeIndex == index ? 'navActive' : ''}}" bindtap="tabClick">
+        {{item}}
+      </view>
+    </view>
+    
+  </view>
+  <view>
+    <view hidden="{{activeIndex != 0}}" class="zjRight">
+      <view class="twBox" wx:for="{{content}}" wx:key="index">
+        <view class="nameF"><text class="yyColor">姓名：</text>{{item.name}}</view>
+        <view class="nameF"><text class="yyColor">类别：</text>{{item.Lclass}}</view>
+        <view class="nameF"><text class="yyColor">处理范围：</text>{{item.cl}}</view>
+        <view class="mePro">向我提问</view>
+      </view>
+    </view>
+    <view hidden="{{activeIndex != 1}}" class="zjRight">
+      <view class="twBox">选项二的内容</view>
+      <view class="twBox">选项二的内容</view>
+      <view class="twBox">选项二的内容</view>
+    </view>
+    <view hidden="{{activeIndex != 2}}" class="zjRight">
+      <view class="twBox">选项三的内容</view>
+      <view class="twBox">选项三的内容</view>
+      <view class="twBox">选项三的内容</view>
+    </view>
+  </view>
+
+    <!-- <view wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+        </view>
+    </view>
+
+  <view class="">
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
+  </view> -->
+</view>

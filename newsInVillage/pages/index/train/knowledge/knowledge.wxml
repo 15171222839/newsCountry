@@ -1,0 +1,7 @@
+<!--pages/index/train/knowledge/knowledge.wxml-->
+<view class="knowK">
+  <view class="knowTit" wx:for="{{txt}}" wx:key="index" bindtap='tzPage'>
+    <view class="knowTxt eclipse-two">{{item.text}}</view>
+    <view class="nowDate">{{item.date}}</view>
+  </view> 
+</view>

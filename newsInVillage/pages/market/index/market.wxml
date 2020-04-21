@@ -1,0 +1,89 @@
+<!--pages/market/market.wxml-->
+<view class="market">
+  <view class="meFollow">
+    <view class="FSeach">
+      <view class="iSeach">
+        <input class="search" placeholder='搜索品种' bindfocus="getSearch"></input>
+        <image class="ScImg" src='../../../assets/images/schq/icon-4.png'></image>
+      </view>
+    </view>
+    
+    <view class="mineFollow">
+      <view class="imgFollow">
+        <image class="wdgzImg" src='../../../assets/images/schq/icon-5.png'></image>
+        <view class="wdgz">我的关注</view>
+      </view>
+      <view class="vegatable" >
+        <view wx:for="{{veg}}" wx:key="index" 
+        id="{{index}}" class="waterg {{activeIndex == index ? 'active' : ''}}" 
+        bindtap="tabClick">{{item.txt}}</view>
+      </view>
+      <view class="marketM">
+        <view class="titLoc flexT">
+          <view class="markMoney">丝瓜市场价格</view>
+          <view style='display:flex'>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+              <view class="picker">
+               {{array[index]}}
+              </view>
+            </picker>
+            <image class="SImgx" src='../../../assets/images/index/icon-drop-down@2x.png'></image>
+          </view>
+        </view>
+        <view class="nzrDate flexT">
+          <view wx:for="{{nzrData}}" wx:key="index" 
+          id="{{index}}" class="week {{activeId == index ? 'activeNZR' : ''}}"
+          bindtap="tabClickMoney">{{item.txt}}</view>
+        </view>
+        <view class="picEcharts" id="picEcharts">
+          <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+        </view>
+      </view>
+    </view> 
+  </view>
+  <!-- 当日市场价格 -->
+  <view class="dayMoney">
+    <view class="imgFollow">
+      <image class="wdgzImg" src='../../../assets/images/schq/icon-1.png'></image>
+      <view class="wdgz">当日市场价格 <text class="dateMine">(2019-8-14)</text></view>
+    </view>
+    <view class="marketName">
+      <view class="nameTit flexT">
+        <view class="titMark">市场名称</view>
+        <view class="titPname">品种名称</view>
+        <view class="titPjj">
+          <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+            <view class="picker">
+              {{array1[index1]}}
+            </view>
+          </picker>
+          <image class="SImgx" src='../../../assets/images/index/icon-drop-down@2x.png'></image>
+        </view>
+      </view>
+      <view class="scrollGun">
+        <view class="inGun" style='top:{{-scrollTop}}rpx'>
+          <view class="nameTitC" wx:for="{{marketM}}" wx:key="index">
+            <view class="titMark p-eclipse">{{item.name}}</view>
+            <view class="titPname">{{item.pinz}}</view>
+            <view class="titPj">{{item.money}}</view>
+          </view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+  <!-- 市场行情 -->
+  <view class="marketHq">
+    <view class="imgFollow">
+      <image class="wdgzImg" src='../../../assets/images/schq/icon-3.png'></image>
+      <view class="wdgz">市场行情</view>
+    </view>
+    <view class="hangPt" wx:for="{{imgMarket}}" wx:key="index" bindtap='btnDetail'>
+      <image class="cImg" src='{{item.src}}'></image>
+      <view class="textAdate">
+        <view class="txtpt twoKit">{{item.text}}</view>
+        <view class="datetp">{{item.date}}</view>
+      </view>
+    </view>
+</view>
+</view>

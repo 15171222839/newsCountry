@@ -1,0 +1,20 @@
+<!--pages/mine/trainClassBm/trainClassBm.wxml-->
+<view class="trainClass">
+  <view class="tableMan">
+    <view class="tableTit">创业人员农村居家养老护理员技能培训</view>
+    <view class="tableContent" >
+      <view wx:for="{{txt}}" wx:key="index" class="pxTit {{index == 0 ? 'Stit' : ''}} " >
+        <view class="major" >{{item.tit}}</view>
+        <view class="nursing">{{item.type}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="bmNews">
+    <view class="bmNewsTit">报名信息</view>
+    <view class="bmTxtCont" wx:for="{{news}}" wx:key="index">
+      <view class="newName">{{item.name}}</view>
+      <view class="newTel">{{item.tel}}</view>
+    </view>
+  </view>
+</view>
